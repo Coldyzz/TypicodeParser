@@ -13,7 +13,7 @@ struct DetailAlbumList: Codable {
     let thumbnailUrl: String
 }
 
-class DetailListRepository {
+/* class DetailListRepository {
     func loadAlbumList(completion: @escaping ([DetailAlbumList]) -> Void) {
         let request = AF.request("https://jsonplaceholder.typicode.com/photos?albumId=\(<#Any.Type#>)")
         request.responseDecodable(of: [DetailAlbumList].self) {response in
@@ -21,4 +21,4 @@ class DetailListRepository {
         }
     }
 }
-
+*/

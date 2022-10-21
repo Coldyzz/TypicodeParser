@@ -48,6 +48,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TJU-0P-vIj"/>
+                    <connections>
+                        <outlet property="albumListView" destination="Ab6-g8-r7N" id="wOA-7a-OHS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,6 +21,7 @@
 		EF9CAC422902FFFD0037073E /* AlbumListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC412902FFFD0037073E /* AlbumListRepository.swift */; };
 		EF9CAC44290300500037073E /* DetailsAlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC43290300500037073E /* DetailsAlbumRepository.swift */; };
 		EF9CAC47290300770037073E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EF9CAC46290300770037073E /* Alamofire */; };
+		EF9CAC4A290313D60037073E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = EF9CAC49290313D60037073E /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9CAC47290300770037073E /* Alamofire in Frameworks */,
+				EF9CAC4A290313D60037073E /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +134,7 @@
 			name = TypicodeParser;
 			packageProductDependencies = (
 				EF9CAC46290300770037073E /* Alamofire */,
+				EF9CAC49290313D60037073E /* AlamofireImage */,
 			);
 			productName = TypicodeParser;
 			productReference = EF9CAC1C2901B0510037073E /* TypicodeParser.app */;
@@ -163,6 +166,7 @@
 			mainGroup = EF9CAC132901B0510037073E;
 			packageReferences = (
 				EF9CAC45290300770037073E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EF9CAC48290313D60037073E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = EF9CAC1D2901B0510037073E /* Products */;
 			projectDirPath = "";
@@ -428,6 +432,14 @@
 				kind = branch;
 			};
 		};
+		EF9CAC48290313D60037073E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -435,6 +447,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF9CAC45290300770037073E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EF9CAC49290313D60037073E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF9CAC48290313D60037073E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
