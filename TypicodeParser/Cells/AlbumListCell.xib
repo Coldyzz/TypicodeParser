@@ -32,6 +32,9 @@
                 <constraint firstItem="0jS-yQ-Jj8" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.95" id="mBc-tb-WTM"/>
             </constraints>
             <size key="customSize" width="360" height="50"/>
+            <connections>
+                <outlet property="albumTitle" destination="0jS-yQ-Jj8" id="jnS-XE-4xn"/>
+            </connections>
             <point key="canvasLocation" x="362.31884057971018" y="92.410714285714278"/>
         </collectionViewCell>
     </objects>

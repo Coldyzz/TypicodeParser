@@ -1,5 +1,5 @@
 //
-//  DeteilAlbumCell.swift
+//  DetailAlbumCell.swift
 //  TypicodeParser
 //
 //  Created by Дима Холод on 21.10.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DeteilAlbumCell: UICollectionViewCell {
+class DetailAlbumCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

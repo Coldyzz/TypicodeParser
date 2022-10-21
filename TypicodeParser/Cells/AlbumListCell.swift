@@ -8,11 +8,18 @@
 import UIKit
 
 class AlbumListCell: UICollectionViewCell {
-
+    @IBOutlet weak var albumTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    var data: AlbumList! {
+        didSet {
+            prepareForReuse()
+        }
+    }
+    var albumCell: AlbumListRepository!
+    override func prepareForReuse() {
+        albumTitle.text = data.title
+    }
 }
-//albumId
+
