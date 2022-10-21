@@ -7,14 +7,14 @@
 
 import UIKit
 
-class AlbumVC: UIViewController, UICollectionViewDelegate {
+class AlbumVC: UIViewController, UICollectionViewDataSource{
     @IBOutlet weak var albumListView: UICollectionView!
     let albumListRepo = AlbumListRepository()
     var albums: [AlbumList] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         let cellNib = UINib(nibName: "AlbumListCell", bundle: nil)
-        albumListView.delegate = self
+        albumListView.dataSource = self
         albumListView.register(cellNib, forCellWithReuseIdentifier: "AlbumListCell")
         getList()
     }
@@ -28,7 +28,7 @@ class AlbumVC: UIViewController, UICollectionViewDelegate {
                         numberOfItemsInSection section: Int) -> Int {
         return albums.count
     }
-    private func collectionView(_ collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = albumListView.dequeueReusableCell(withReuseIdentifier:"AlbumListCell",for: indexPath) as? AlbumListCell else {
             fatalError("Cell is not expected type")
