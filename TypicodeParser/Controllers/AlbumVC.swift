@@ -24,5 +24,18 @@ class AlbumVC: UIViewController, UICollectionViewDelegate {
             self.albumListView.reloadData()
         }
     }
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return albums.count
+    }
+    private func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = albumListView.dequeueReusableCell(withReuseIdentifier:"AlbumListCell",for: indexPath) as? AlbumListCell else {
+            fatalError("Cell is not expected type")
+        }
+        cell.data = albums[indexPath.row]
+        cell.albumCell = albumListRepo
+        return cell
+    }
 }
 
