@@ -7,14 +7,16 @@
 
 import UIKit
 
-class AlbumVC: UIViewController, UICollectionViewDataSource{
+class AlbumVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     @IBOutlet weak var albumListView: UICollectionView!
     let albumListRepo = AlbumListRepository()
     var albums: [AlbumList] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "ALBUMS"
         let cellNib = UINib(nibName: "AlbumListCell", bundle: nil)
         albumListView.dataSource = self
+        albumListView.delegate = self
         albumListView.register(cellNib, forCellWithReuseIdentifier: "AlbumListCell")
         getList()
     }
@@ -36,6 +38,10 @@ class AlbumVC: UIViewController, UICollectionViewDataSource{
         cell.data = albums[indexPath.row]
         cell.albumCell = albumListRepo
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.item
+        navigationController?.pushViewController(DetailsAlbumVC, animated: true)
     }
 }
 
