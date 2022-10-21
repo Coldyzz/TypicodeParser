@@ -18,6 +18,9 @@
 		EF9CAC3C2902D3AB0037073E /* AlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC3A2902D3AB0037073E /* AlbumListCell.swift */; };
 		EF9CAC3F2902D3D60037073E /* DeteilAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9CAC3D2902D3D60037073E /* DeteilAlbumCell.xib */; };
 		EF9CAC402902D3D60037073E /* DeteilAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC3E2902D3D60037073E /* DeteilAlbumCell.swift */; };
+		EF9CAC422902FFFD0037073E /* AlbumListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC412902FFFD0037073E /* AlbumListRepository.swift */; };
+		EF9CAC44290300500037073E /* DetailsAlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9CAC43290300500037073E /* DetailsAlbumRepository.swift */; };
+		EF9CAC47290300770037073E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EF9CAC46290300770037073E /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,8 @@
 		EF9CAC3A2902D3AB0037073E /* AlbumListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListCell.swift; sourceTree = "<group>"; };
 		EF9CAC3D2902D3D60037073E /* DeteilAlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeteilAlbumCell.xib; sourceTree = "<group>"; };
 		EF9CAC3E2902D3D60037073E /* DeteilAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeteilAlbumCell.swift; sourceTree = "<group>"; };
+		EF9CAC412902FFFD0037073E /* AlbumListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListRepository.swift; sourceTree = "<group>"; };
+		EF9CAC43290300500037073E /* DetailsAlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAlbumRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9CAC47290300770037073E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +74,7 @@
 			children = (
 				EF9CAC362901B3ED0037073E /* Controllers */,
 				EF9CAC352901B3E60037073E /* Cells */,
-				EF9CAC332901B3060037073E /* Repository */,
+				EF9CAC332901B3060037073E /* Repositories */,
 				EF9CAC1F2901B0510037073E /* AppDelegate.swift */,
 				EF9CAC212901B0510037073E /* SceneDelegate.swift */,
 				EF9CAC252901B0510037073E /* Main.storyboard */,
@@ -79,11 +85,13 @@
 			path = TypicodeParser;
 			sourceTree = "<group>";
 		};
-		EF9CAC332901B3060037073E /* Repository */ = {
+		EF9CAC332901B3060037073E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EF9CAC412902FFFD0037073E /* AlbumListRepository.swift */,
+				EF9CAC43290300500037073E /* DetailsAlbumRepository.swift */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		EF9CAC352901B3E60037073E /* Cells */ = {
@@ -122,6 +130,9 @@
 			dependencies = (
 			);
 			name = TypicodeParser;
+			packageProductDependencies = (
+				EF9CAC46290300770037073E /* Alamofire */,
+			);
 			productName = TypicodeParser;
 			productReference = EF9CAC1C2901B0510037073E /* TypicodeParser.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +161,9 @@
 				Base,
 			);
 			mainGroup = EF9CAC132901B0510037073E;
+			packageReferences = (
+				EF9CAC45290300770037073E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EF9CAC1D2901B0510037073E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,7 +197,9 @@
 				EF9CAC242901B0510037073E /* AlbumVC.swift in Sources */,
 				EF9CAC202901B0510037073E /* AppDelegate.swift in Sources */,
 				EF9CAC3C2902D3AB0037073E /* AlbumListCell.swift in Sources */,
+				EF9CAC422902FFFD0037073E /* AlbumListRepository.swift in Sources */,
 				EF9CAC222901B0510037073E /* SceneDelegate.swift in Sources */,
+				EF9CAC44290300500037073E /* DetailsAlbumRepository.swift in Sources */,
 				EF9CAC382901B5DF0037073E /* DetailsAlbumVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF9CAC45290300770037073E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF9CAC46290300770037073E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF9CAC45290300770037073E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF9CAC142901B0510037073E /* Project object */;
 }

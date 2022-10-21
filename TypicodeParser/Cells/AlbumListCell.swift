@@ -15,3 +15,4 @@ class AlbumListCell: UICollectionViewCell {
     }
 
 }
+//albumId
