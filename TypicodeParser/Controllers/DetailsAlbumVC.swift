@@ -18,6 +18,13 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
         let cellNib = UINib(nibName: "DetailAlbumCell", bundle: nil)
         detailsView.dataSource = self
         detailsView.register(cellNib, forCellWithReuseIdentifier: "DetailAlbumCell")
+        getAlbums()
+    }
+    func getAlbums() {
+        detailListRepo.loadDetailAlbumList{ list in
+            self.detailList = list
+            self.detailsView.reloadData()
+        }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return detailList.count
