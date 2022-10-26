@@ -38,6 +38,10 @@
                 <constraint firstItem="b5a-ru-FcQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xRh-b2-XAv"/>
             </constraints>
             <size key="customSize" width="484" height="187"/>
+            <connections>
+                <outlet property="detailImage" destination="b5a-ru-FcQ" id="ak5-Wh-dc4"/>
+                <outlet property="detailTitle" destination="SAg-9R-Non" id="hhn-6m-M6b"/>
+            </connections>
             <point key="canvasLocation" x="236.23188405797103" y="138.28125"/>
         </collectionViewCell>
     </objects>

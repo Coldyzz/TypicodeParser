@@ -8,14 +8,6 @@
 import UIKit
 
 class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
     @IBOutlet weak var detailsView: UICollectionView!
     let detailListRepo = DetailListRepository()
     var detailList: [DetailAlbumList] = []
@@ -26,4 +18,17 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
         detailsView.dataSource = self
         detailsView.register(cellNib, forCellWithReuseIdentifier: "DetailAlbumCell")
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return detailList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = detailsView.dequeueReusableCell(withReuseIdentifier:"DetailAlbumCell",for: indexPath) as? DetailAlbumCell else {
+            fatalError("Cell is not expected type")
+        }
+        cell.data = detailList[indexPath.row]
+        cell.detailCell = detailListRepo
+        return cell
+    }
+    
 }
