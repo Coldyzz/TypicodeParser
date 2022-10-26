@@ -42,6 +42,7 @@ class AlbumVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.item
         navigationController?.pushViewController(DetailsAlbumVC, animated: true)
+            // нужно передать индекс на тот єкран
     }
 }
 

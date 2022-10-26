@@ -94,6 +94,9 @@
                             <constraint firstItem="1zG-Rr-L08" firstAttribute="width" secondItem="bmD-au-95x" secondAttribute="width" multiplier="0.85" id="tpr-W0-ibq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailsView" destination="1zG-Rr-L08" id="XGg-TG-Xhx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCt-VA-8Mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,9 @@
 import UIKit
 
 class DetailsAlbumVC: UIViewController {
-
+    @IBOutlet weak var detailsView: UICollectionView!
+    let detailListRepo = DetailListRepository()
+    var detailList: [DetailAlbumList] = []
     override func viewDidLoad() {
         super.viewDidLoad()
     }
