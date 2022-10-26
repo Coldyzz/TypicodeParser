@@ -11,6 +11,7 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var detailsView: UICollectionView!
     let detailListRepo = DetailListRepository()
     var detailList: [DetailAlbumList] = []
+    var anchor: AlbumList?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "DETAILS ALBUM"
