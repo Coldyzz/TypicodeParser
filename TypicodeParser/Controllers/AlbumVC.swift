@@ -35,7 +35,7 @@ class AlbumVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         guard let cell = albumListView.dequeueReusableCell(withReuseIdentifier:"AlbumListCell",for: indexPath) as? AlbumListCell else {
             fatalError("Cell is not expected type")
         }
-        cell.data = albums[indexPath.row]
+        cell.data = albums[indexPath.item]
         cell.albumCell = albumListRepo
         return cell
     }
