@@ -21,7 +21,7 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
         getAlbums()
     }
     func getAlbums() {
-        detailListRepo.loadDetailAlbumList{ list in
+        detailListRepo.loadDetailAlbumList(albumId: anchor!.id) { list in
             self.detailList = list
             self.detailsView.reloadData()
         }

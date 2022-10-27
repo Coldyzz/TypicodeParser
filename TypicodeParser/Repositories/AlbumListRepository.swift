@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 // id = albumID(т.е. в детейлсах айди это альбом айди
 struct AlbumList: Codable {
-    //let id: Int
+    let id: Int
     let title: String
 }
 class AlbumListRepository {
