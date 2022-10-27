@@ -59,7 +59,7 @@
         <!--Details AlbumVC-->
         <scene sceneID="vRN-Mu-KFA">
             <objects>
-                <viewController id="Txb-9q-zkF" customClass="DetailsAlbumVC" customModule="TypicodeParser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailsAlbumVC" id="Txb-9q-zkF" customClass="DetailsAlbumVC" customModule="TypicodeParser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bmD-au-95x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

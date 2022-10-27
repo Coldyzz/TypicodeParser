@@ -11,7 +11,8 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var detailsView: UICollectionView!
     let detailListRepo = DetailListRepository()
     var detailList: [DetailAlbumList] = []
-    var anchor: AlbumList?
+    var anchor: AlbumList!
+    //var anchor: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "DETAILS ALBUM"
@@ -21,7 +22,7 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
         getAlbums()
     }
     func getAlbums() {
-        detailListRepo.loadDetailAlbumList(albumId: anchor!.id) { list in
+        detailListRepo.loadDetailAlbumList(albumId: anchor.id) { list in
             self.detailList = list
             self.detailsView.reloadData()
         }
@@ -35,7 +36,6 @@ class DetailsAlbumVC: UIViewController, UICollectionViewDataSource {
             fatalError("Cell is not expected type")
         }
         cell.data = detailList[indexPath.row]
-        cell.detailCell = detailListRepo
         return cell
     }
     

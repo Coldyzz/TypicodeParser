@@ -36,13 +36,14 @@ class AlbumVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             fatalError("Cell is not expected type")
         }
         cell.data = albums[indexPath.item]
-        cell.albumCell = albumListRepo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.item
         let goInside = albums[index]
-        let detailsController = DetailsAlbumVC()
+        guard let detailsController = storyboard?.instantiateViewController(withIdentifier: "detailsAlbumVC") as? DetailsAlbumVC else {
+            return
+        }
         detailsController.anchor = goInside
         navigationController?.pushViewController(detailsController, animated: true)
             // нужно передать индекс на тот єкран
