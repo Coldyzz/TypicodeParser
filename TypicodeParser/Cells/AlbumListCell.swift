@@ -17,7 +17,6 @@ class AlbumListCell: UICollectionViewCell {
             prepareForReuse()
         }
     }
-    var albumCell: AlbumListRepository!
     override func prepareForReuse() {
         super.prepareForReuse()
         albumTitle.text = data.title

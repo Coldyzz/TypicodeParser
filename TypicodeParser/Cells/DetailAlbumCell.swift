@@ -20,7 +20,6 @@ class DetailAlbumCell: UICollectionViewCell {
             prepareForReuse()
         }
     }
-    var detailCell: DetailListRepository!
     override func prepareForReuse() {
         super.prepareForReuse()
         detailTitle.text = data.title
